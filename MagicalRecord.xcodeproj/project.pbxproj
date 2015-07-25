@@ -595,6 +595,7 @@
 		E57AD33F1B642AD800DAA71D /* MagicalRecordLogging.h in Headers */ = {isa = PBXBuildFile; fileRef = 90FEC08B18F42DEA002FFC2F /* MagicalRecordLogging.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E57AD3401B642AD800DAA71D /* MagicalRecordShorthandMethodAliases.h in Headers */ = {isa = PBXBuildFile; fileRef = 90B05B851B02450900354056 /* MagicalRecordShorthandMethodAliases.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E57AD3411B642AF200DAA71D /* MagicalRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = C7DD72D4150F832A00216827 /* MagicalRecord.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E57AD3A21B644B2A00DAA71D /* MagicalRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = C7DD72D4150F832A00216827 /* MagicalRecord.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1505,6 +1506,7 @@
 				E57AD24A1B64294300DAA71D /* MagicalRecordShorthandMethodAliases.h in Headers */,
 				E57AD20D1B64292800DAA71D /* MagicalRecord for watchOS.h in Headers */,
 				E57AD2221B64294300DAA71D /* NSManagedObject+MagicalDataImport.h in Headers */,
+				E57AD3A21B644B2A00DAA71D /* MagicalRecord.h in Headers */,
 				E57AD22E1B64294300DAA71D /* NSManagedObjectContext+MagicalRecord.h in Headers */,
 				E57AD2201B64294300DAA71D /* NSManagedObject+MagicalAggregation.h in Headers */,
 				E57AD2441B64294300DAA71D /* MagicalRecord+ShorthandMethods.h in Headers */,
