@@ -11,7 +11,6 @@
 #import "MagicalRecord+ErrorHandling.h"
 #import "MagicalRecordLogging.h"
 
-
 static NSPersistentStoreCoordinator *defaultCoordinator_ = nil;
 NSString * const kMagicalRecordPSCDidCompleteiCloudSetupNotification = @"kMagicalRecordPSCDidCompleteiCloudSetupNotification";
 NSString * const kMagicalRecordPSCMismatchWillDeleteStore = @"kMagicalRecordPSCMismatchWillDeleteStore";
@@ -157,15 +156,15 @@ NSString * const kMagicalRecordPSCMismatchCouldNotRecreateStore = @"kMagicalReco
         NSDictionary *options = [[self class] MR_autoMigrationOptions];
         if (cloudURL)   //iCloud is available
         {
-            NSMutableDictionary *iCloudOptions = [[NSMutableDictionary alloc] init];
-            [iCloudOptions setObject:cloudURL forKey:NSPersistentStoreUbiquitousContentURLKey];
-
-            if ([contentNameKey length] > 0)
-            {
-                [iCloudOptions setObject:contentNameKey forKey:NSPersistentStoreUbiquitousContentNameKey];
-            }
-
-            options = [options MR_dictionaryByMergingDictionary:iCloudOptions];
+//            NSMutableDictionary *iCloudOptions = [[NSMutableDictionary alloc] init];
+//            [iCloudOptions setObject:cloudURL forKey:NSPersistentStoreUbiquitousContentURLKey];
+//
+//            if ([contentNameKey length] > 0)
+//            {
+//                [iCloudOptions setObject:contentNameKey forKey:NSPersistentStoreUbiquitousContentNameKey];
+//            }
+//
+//            options = [options MR_dictionaryByMergingDictionary:iCloudOptions];
         }
         else
         {
@@ -183,12 +182,12 @@ NSString * const kMagicalRecordPSCMismatchCouldNotRecreateStore = @"kMagicalReco
         {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
-            [self lock];
+//            [self lock];
 #pragma clang diagnostic pop
             [self MR_addSqliteStoreNamed:storeIdentifier withOptions:options];
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
-            [self unlock];
+//            [self unlock];
 #pragma clang diagnostic pop
         }
 
