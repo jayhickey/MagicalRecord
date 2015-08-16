@@ -156,15 +156,15 @@ NSString * const kMagicalRecordPSCMismatchCouldNotRecreateStore = @"kMagicalReco
         NSDictionary *options = [[self class] MR_autoMigrationOptions];
         if (cloudURL)   //iCloud is available
         {
-            NSMutableDictionary *iCloudOptions = [[NSMutableDictionary alloc] init];
-            [iCloudOptions setObject:cloudURL forKey:NSPersistentStoreUbiquitousContentURLKey];
-
-            if ([contentNameKey length] > 0)
-            {
-                [iCloudOptions setObject:contentNameKey forKey:NSPersistentStoreUbiquitousContentNameKey];
-            }
-
-            options = [options MR_dictionaryByMergingDictionary:iCloudOptions];
+//            NSMutableDictionary *iCloudOptions = [[NSMutableDictionary alloc] init];
+//            [iCloudOptions setObject:cloudURL forKey:NSPersistentStoreUbiquitousContentURLKey];
+//
+//            if ([contentNameKey length] > 0)
+//            {
+//                [iCloudOptions setObject:contentNameKey forKey:NSPersistentStoreUbiquitousContentNameKey];
+//            }
+//
+//            options = [options MR_dictionaryByMergingDictionary:iCloudOptions];
         }
         else
         {
