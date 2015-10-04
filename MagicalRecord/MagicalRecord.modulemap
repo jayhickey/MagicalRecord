@@ -1,0 +1,16 @@
+framework module CocoaLumberjack {
+	umbrella header "CocoaLumberjack.h"
+	
+	export *
+	module * { export * }
+	
+	textual header "DDLogMacros.h"
+	
+	exclude header "DDLog+LOGV.h"
+	exclude header "DDLegacyMacros.h"
+	
+	explicit module MagicalRecord {
+		header "MagicalRecord.h"
+		export *
+	}
+}
