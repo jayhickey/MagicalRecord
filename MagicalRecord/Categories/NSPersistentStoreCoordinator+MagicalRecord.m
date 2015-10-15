@@ -156,15 +156,17 @@ NSString * const kMagicalRecordPSCMismatchCouldNotRecreateStore = @"kMagicalReco
         NSDictionary *options = [[self class] MR_autoMigrationOptions];
         if (cloudURL)   //iCloud is available
         {
-//            NSMutableDictionary *iCloudOptions = [[NSMutableDictionary alloc] init];
-//            [iCloudOptions setObject:cloudURL forKey:NSPersistentStoreUbiquitousContentURLKey];
-//
-//            if ([contentNameKey length] > 0)
-//            {
-//                [iCloudOptions setObject:contentNameKey forKey:NSPersistentStoreUbiquitousContentNameKey];
-//            }
-//
-//            options = [options MR_dictionaryByMergingDictionary:iCloudOptions];
+            #ifndef TARGET_OS_WATCH
+                NSMutableDictionary *iCloudOptions = [[NSMutableDictionary alloc] init];
+                [iCloudOptions setObject:cloudURL forKey:NSPersistentStoreUbiquitousContentURLKey];
+
+                if ([contentNameKey length] > 0)
+                {
+                    [iCloudOptions setObject:contentNameKey forKey:NSPersistentStoreUbiquitousContentNameKey];
+                }
+
+                options = [options MR_dictionaryByMergingDictionary:iCloudOptions];
+            #endif
         }
         else
         {
@@ -180,15 +182,17 @@ NSString * const kMagicalRecordPSCMismatchCouldNotRecreateStore = @"kMagicalReco
         }
         else
         {
+#ifndef TARGET_OS_WATCH
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
-//            [self lock];
+            [self lock];
 #pragma clang diagnostic pop
             [self MR_addSqliteStoreNamed:storeIdentifier withOptions:options];
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
-//            [self unlock];
+            [self unlock];
 #pragma clang diagnostic pop
+#endif
         }
 
         dispatch_async(dispatch_get_main_queue(), ^{
