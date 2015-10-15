@@ -156,7 +156,7 @@ NSString * const kMagicalRecordPSCMismatchCouldNotRecreateStore = @"kMagicalReco
         NSDictionary *options = [[self class] MR_autoMigrationOptions];
         if (cloudURL)   //iCloud is available
         {
-            #ifndef TARGET_OS_WATCH
+            #ifndef WATCH
                 NSMutableDictionary *iCloudOptions = [[NSMutableDictionary alloc] init];
                 [iCloudOptions setObject:cloudURL forKey:NSPersistentStoreUbiquitousContentURLKey];
 
@@ -182,7 +182,7 @@ NSString * const kMagicalRecordPSCMismatchCouldNotRecreateStore = @"kMagicalReco
         }
         else
         {
-#ifndef TARGET_OS_WATCH
+#ifndef WATCH
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
             [self lock];
