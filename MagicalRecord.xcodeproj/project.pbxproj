@@ -487,6 +487,7 @@
 		C7CF9B6417498986008D9D13 /* SingleEntityWithNoRelationships.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7CF9B5117498985008D9D13 /* SingleEntityWithNoRelationships.plist */; };
 		C7CF9B6517498986008D9D13 /* SingleRelatedEntity.json in Resources */ = {isa = PBXBuildFile; fileRef = C7CF9B5217498985008D9D13 /* SingleRelatedEntity.json */; };
 		C7CF9B6617498986008D9D13 /* SingleRelatedEntity.json in Resources */ = {isa = PBXBuildFile; fileRef = C7CF9B5217498985008D9D13 /* SingleRelatedEntity.json */; };
+		E523566C1DBD151400A381CA /* MagicalRecordXcode7CompatibilityMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 90F829B61B3306DE00CE306F /* MagicalRecordXcode7CompatibilityMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E57AD20D1B64292800DAA71D /* MagicalRecord for watchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = E57AD20C1B64292800DAA71D /* MagicalRecord for watchOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E57AD2121B64294300DAA71D /* MagicalImportFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = C7DD729C150F832A00216827 /* MagicalImportFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E57AD2131B64294300DAA71D /* MagicalImportFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DD729D150F832A00216827 /* MagicalImportFunctions.m */; };
@@ -1528,6 +1529,7 @@
 				E57AD2221B64294300DAA71D /* NSManagedObject+MagicalDataImport.h in Headers */,
 				E57AD3A21B644B2A00DAA71D /* MagicalRecord.h in Headers */,
 				E57AD22E1B64294300DAA71D /* NSManagedObjectContext+MagicalRecord.h in Headers */,
+				E523566C1DBD151400A381CA /* MagicalRecordXcode7CompatibilityMacros.h in Headers */,
 				E57AD2201B64294300DAA71D /* NSManagedObject+MagicalAggregation.h in Headers */,
 				E57AD2441B64294300DAA71D /* MagicalRecord+ShorthandMethods.h in Headers */,
 			);
